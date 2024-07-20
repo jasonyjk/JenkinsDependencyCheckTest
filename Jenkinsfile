@@ -9,7 +9,7 @@ pipeline {
                 }
             }
         }
-		stage('OWASP DependencyCheck') {
+		stage('OWASP Dependency-Check Vulnerabilities') {
             steps {
                 dependencyCheck additionalArguments: '--format HTML --format XML --noupdate --suppression suppression.xml', odcInstallation: 'OWASP Dependency-Check Vulnerabilities'
             }
