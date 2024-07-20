@@ -20,6 +20,7 @@ pipeline {
                             -f 'XML'
                             --prettyPrint
                             --nvdApiKey ${NVD_API_KEY}
+							--dataDirectory './dependency-check-data'
                         """, odcInstallation: 'OWASP Dependency-Check Vulnerabilities'
                     }
                     archiveArtifacts artifacts: 'dependency-check-report.xml', allowEmptyArchive: false
